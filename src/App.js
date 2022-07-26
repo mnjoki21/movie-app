@@ -25,7 +25,7 @@ const App = () => {
         .then((data)=> setMovies(data))
     },[])
     return (
-        <div>
+        <div className ="container-fluid">
             <MovieList movies={movies} />
 
         </div>
