@@ -25,15 +25,15 @@ const App = () => {
             .then((res) => res.json())
         .then((data)=> setMovies(data))
     },[])
+    // 
     return (
-        <div className="container-fluid movie-app">
-            <div className='row'>
-                <MovieList movies={movies} />
-            </div>
-          
+      <div className='container-fluid movie-app'>
+       <div className='row'>
+         <MovieList movies = {movies} />
+       </div>
+      </div>
+)
 
-        </div>
-    )
 }
 
 export default App
