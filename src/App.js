@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import "bootstrap/dist/css/bootstrap.min.css"
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import "./App.css"
 import MovieList from ".//components/MovieList"
 
@@ -25,8 +26,11 @@ const App = () => {
         .then((data)=> setMovies(data))
     },[])
     return (
-        <div className ="container-fluid">
-            <MovieList movies={movies} />
+        <div className="container-fluid movie-app">
+            <div className='row'>
+                <MovieList movies={movies} />
+            </div>
+          
 
         </div>
     )
