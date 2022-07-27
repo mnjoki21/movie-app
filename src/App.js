@@ -3,9 +3,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import "./App.css"
 import MovieList from ".//components/MovieList"
+import MovieListHeading from './components/MovieListHeading';
 
 const App = () => {
-    const [movies, setMovies] = useState ([])
+    const [movies, setMovies] = useState([])
+        const [searchValue, setSearchValue] =useState("")
 
     // const getMovies = () => {
     //     fetch('http://localhost:5000/movies')
@@ -28,7 +30,11 @@ const App = () => {
     // 
     return (
       <div className='container-fluid movie-app'>
-       <div className='row'>
+            <div className='row'>
+                <div className="row">
+                    <MovieListHeading heading = "Movies" />
+                    
+             </div>
          <MovieList movies = {movies} />
        </div>
       </div>
